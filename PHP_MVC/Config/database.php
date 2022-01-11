@@ -4,7 +4,7 @@ class database{
 	public $host = "localhost";
 	public $user = "root";
 	public $pass = "";
-	public $dbname = "vols_mvc";
+	public $dbname = "volsmvc";
 
 	public function connect(){
 		$con = mysqli_connect($this->host, $this->user, $this->pass, $this->dbname);

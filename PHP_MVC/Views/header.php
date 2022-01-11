@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Vols MVC</title>
+  <title>MVC vols</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -15,22 +15,24 @@
 </head>
 <body>
 <div class="p-5 bg-primary text-white text-center">
-  <h1>Vols MVC</h1>
+  <h1>MVC vols</h1>
 </div>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <div class="container-fluid">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link active" href="usuari/registrar">Active</a>
+        <a class="nav-link" href="index.php?controller=vol&action=mostrarvols">Mostrar vols</a>
+      <li class="nav-item">
+        <a class="nav-link" href="index.php?controller=vol&action=insertarvols">Insertar vols</a>
       </li>
+      <li class="nav-item">
+       <li class="nav-item">
+        <a class="nav-link" href="index.php?controller=reserva&action=mostrarreserva">Mostrar reserva</a>
+      <li class="nav-item">
+        <a class="nav-link" href="index.php?controller=reserva&action=insertarreserva">Insertar reserva</a>
+      </li> 
       <li class="nav-item">
         <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
       </li>
     </ul>
   </div>
