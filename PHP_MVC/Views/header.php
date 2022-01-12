@@ -25,11 +25,10 @@
       <li class="nav-item">
         <a class="nav-link" href="index.php?controller=vol&action=insertarvols">Insertar vols</a>
       </li>
-      <li class="nav-item">
        <li class="nav-item">
-        <a class="nav-link" href="index.php?controller=reserva&action=mostrarreserva">Mostrar reserva</a>
+        <a class="nav-link" href="index.php?controller=usuari&action=insertarusuari">Mostrar usuari</a>
       <li class="nav-item">
-        <a class="nav-link" href="index.php?controller=reserva&action=insertarreserva">Insertar reserva</a>
+        <a class="nav-link" href="index.php?controller=usuari&action=mostrarusuari">Insertar usuari</a>
       </li> 
       <li class="nav-item">
         <a class="nav-link" href="#">Link</a>

@@ -4,26 +4,15 @@
     class usuari
     {
 
-        private $codi;
-        private $nom;
-        private $contrasenya;
-        private $correu;
-        private $adreça;
-        private $dni;
-        private $telefon;
-        private $num_tarjeta;
-        private $rol;
-
-        public function __construct($nom,$contrasenya,$correu,$adreça,$dni,$telefon,$num_tarjeta)
-        {
-            $this->nom=$nom;
-            $this->contrasenya=$contrasenya;
-            $this->correu=$correu;
-            $this->adreça=$adreça;
-            $this->dni=$dni;
-            $this->telefon=$telefon;
-            $this->num_tarjeta=$num_tarjeta;
-        }
+        public $codi;
+        public $nom;
+        public $contrasenya;
+        public $correu;
+        public $adreça;
+        public $dni;
+        public $telefon;
+        public $num_tarjeta;
+        public $rol;
 
         public function insertar(){
     

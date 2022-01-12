@@ -20,5 +20,6 @@
         <label for="nombre_places">Nombre places</label>
         <input type="text" class="form-control" id="nombre_places" name="nombre_places" placeholder="Nombre places">
     </div>
+    <br>
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
