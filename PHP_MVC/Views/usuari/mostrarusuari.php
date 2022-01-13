@@ -23,8 +23,8 @@ while($row = $usuaris->fetch_assoc()){
     echo "<td>".$row['dni']."</td>";
     echo "<td>".$row['telefon']."</td>";
     echo "<td>".$row['num_tarjeta']."</td>";
-    echo "<td><a href='index.php?controller=usuari&action=modificarusuaris&codi=".$row['codi']."'>Modificar</a></td>";
-    echo "<td><a href='index.php?controller=usuari&action=eliminarusuaris&codi=".$row['codi']."'>Eliminar</a></td>";
+    echo "<td><a href='index.php?controller=usuari&action=modificarusuari&codi=".$row['codi']."'>Modificar</a></td>";
+    echo "<td><a href='index.php?controller=usuari&action=eliminarusuari&codi=".$row['codi']."'>Eliminar</a></td>";
     echo "</tr>";
 }
 echo "</table>";

@@ -1,4 +1,4 @@
-<form action="index.php?controller=usuari&action=guardarusuaris" method="post">
+<form action="index.php?controller=usuari&action=guardarusuari" method="post">
 
     <div class="form-group">
         <label for="origen">Nom</label>
@@ -28,5 +28,6 @@
         <label for="nombre_places">Numero_tarjeta</label>
         <input type="text" class="form-control" id="num_tarjeta" name="num_tarjeta" placeholder="NumeroTarjeta">
     </div>
+    <br>
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
