@@ -46,6 +46,16 @@
                 return $resultado;
         }
 
+        public function innerjoin(){
+                $conexion = new database();
+                $sql ="SELECT * FROM reserva r INNER JOIN usuario u
+                ON r.codi_usuario = u.codi ";
+                $a = $conexion->connect();
+                $resultado = $a->query($sql);
+                $a->close();
+                return $resultado;
+        }
+
         /**
          * Get the value of codi
          */ 

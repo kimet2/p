@@ -3,10 +3,10 @@
         <label for="codi_vol">Codi Vol</label>
         <input type="text" class="form-control" id="codi_vol" name="codi_vol" placeholder="Codi Vol">
     </div>
-    <div class="form-group">
+    <!-- <div class="form-group">
         <label for="codi_usuari">Codi Usuari</label>
         <input type="text" class="form-control" id="codi_usuari" name="codi_usuari" placeholder="Codi Usuari">
-    </div>
+    </div> -->
     <div class="form-group">
         <label for="data_anada">Data anada</label>
         <input type="text" class="form-control" id="data_anada" name="data_anada" placeholder="Data Anada">
