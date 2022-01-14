@@ -27,16 +27,29 @@ class reservaController{
     public function actualitzarreserva(){
         $reserva = new reserva();
         $reserva->codi = $_POST['codi'];
-        $reserva->nom = $_POST['nom'];
-        $reserva->contrasenya = $_POST['contrasenya'];
-        $reserva->correu = $_POST['correu'];
-        $reserva->adreça = $_POST['adreça'];
-        $reserva->dni = $_POST['dni'];
-        $reserva->telefon = $_POST['telefon'];
-        $reserva->num_tarjeta = $_POST['num_tarjeta'];
+        $reserva->codi_vol = $_POST['codi_vol'];
+        $reserva->codi_usuari = $_POST['codi_usuari'];
+        $reserva->data_anada = $_POST['data_anada'];
+        $reserva->data_tornada = $_POST['data_tornada'];
+        $reserva->nombre_places = $_POST['nombre_places'];
         $reserva->modificar();
-        header("Location: index.php?controller=usuari&action=mostrarusuari");
+        header("Location: index.php?controller=reserva&action=mostrarreserva");
     }
+    public function modificarreserva(){
+        $reserva = new reserva();
+        $reserva->codi = $_GET['codi'];
+        $resultado = $reserva->buscar();
+        $row = $resultado->fetch_assoc();
+        require_once 'views/reserva/modificarreservas.php';
+    }
+
+    public function eliminarreserva(){
+        $reserva = new reserva();
+        $reserva->codi = $_GET['codi'];
+        $reserva->eliminar();
+        header("Location: index.php?controller=reserva&action=mostrarreserva");
+    }
+
     public function index(){
         require_once 'index.php';
     }
