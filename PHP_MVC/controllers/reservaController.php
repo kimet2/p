@@ -11,17 +11,11 @@ class reservaController{
     public function insertarreserva(){
         require_once 'views/reserva/insertarreserva.php';
     }
-    public function mostrarinner(){  
-        /* $vol = new vol();
-        $vols = $vol->listar(); */
-        $reserva = new reserva();
-        $sql = $reserva->innerjoin();
-        require_once 'views/reserva/mostrarreserva.php';
-    }
+
     public function guardarreserva(){
         $reserva = new reserva();
         $reserva->codi_vol = $_POST['codi_vol'];
-        $reserva->innerjoin();
+        $reserva->codi_usuari = $_POST['codi_usuari'];
         $reserva->data_anada = $_POST['data_anada'];
         $reserva->data_tornada = $_POST['data_tornada'];
         $reserva->nombre_places = $_POST['nombre_places'];
@@ -30,6 +24,19 @@ class reservaController{
 
     }
 
+    public function actualitzarreserva(){
+        $reserva = new reserva();
+        $reserva->codi = $_POST['codi'];
+        $reserva->nom = $_POST['nom'];
+        $reserva->contrasenya = $_POST['contrasenya'];
+        $reserva->correu = $_POST['correu'];
+        $reserva->adreça = $_POST['adreça'];
+        $reserva->dni = $_POST['dni'];
+        $reserva->telefon = $_POST['telefon'];
+        $reserva->num_tarjeta = $_POST['num_tarjeta'];
+        $reserva->modificar();
+        header("Location: index.php?controller=usuari&action=mostrarusuari");
+    }
     public function index(){
         require_once 'index.php';
     }

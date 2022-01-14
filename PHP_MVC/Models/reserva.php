@@ -45,16 +45,14 @@
                 $a->close();
                 return $resultado;
         }
-
-        public function innerjoin(){
+        public function eliminar(){
                 $conexion = new database();
-                $sql ="SELECT * FROM reserva r INNER JOIN usuario u
-                ON r.codi_usuario = u.codi ";
+                $sql = "DELETE FROM reserva WHERE codi = '$this->codi'";
                 $a = $conexion->connect();
-                $resultado = $a->query($sql);
+                $a->query($sql);
                 $a->close();
-                return $resultado;
         }
+        
 
         /**
          * Get the value of codi

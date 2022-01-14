@@ -14,9 +14,7 @@ while($rows = $reservas->fetch_assoc()){
     echo "<tr>";
     echo "<td>".$rows['codi']."</td>";
     echo "<td>".$rows['codi_vol']."</td>";
-    while($row = $sql->fetch_array()){
-        echo "<td>".$row['codi_usuari']."</td>";
-    }
+    echo "<td>".$rows['codi_usuari']."</td>";
     echo "<td>".$rows['data_anada']."</td>";
     echo "<td>".$rows['data_tornada']."</td>";
     echo "<td>".$rows['nombre_places']."</td>";
