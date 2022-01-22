@@ -32,11 +32,9 @@
       </li> 
       <li class="nav-item">
         <a class="nav-link" href="index.php?controller=reserva&action=mostrarreserva">Mostrar reserva</a>
-      <li class="nav-item">
-        <a class="nav-link" href="index.php?controller=reserva&action=insertarreserva">Insertar reserva</a>
-      </li> 
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+    </li> 
+    <li class="nav-item">
+        <a class="nav-link" href="index.php?controller=ticket&action=mostrarticket">Mostrar tickets</a>
       </li>
     </ul>
   </div>

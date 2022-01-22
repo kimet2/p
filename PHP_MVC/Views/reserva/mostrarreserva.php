@@ -21,7 +21,7 @@ while($rows = $reservas->fetch_assoc()){
     echo "<td>".$rows['nombre_places']."</td>";
     echo "<td><a href='index.php?controller=reserva&action=modificarreserva&codi=".$rows['codi']."'>Modificar</a></td>";
     echo "<td><a href='index.php?controller=reserva&action=eliminarreserva&codi=".$rows['codi']."'>Eliminar</a></td>";
-    #echo "<td><a href='index.php?controller=reserva&action=eliminarreserva&codi=".$rows['codi']."'>Eliminar</a></td>";
+    echo "<td><a href='index.php?controller=ticket&action=pagartickets&codi=".$rows['codi']."'>Pagar</a></td>";
     echo "</tr>";
 }
 echo "</table>";

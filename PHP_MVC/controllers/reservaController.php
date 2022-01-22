@@ -27,8 +27,6 @@ class reservaController{
     public function actualitzarreserva(){
         $reserva = new reserva();
         $reserva->codi = $_POST['codi'];
-        $reserva->codi_vol = $_POST['codi_vol'];
-        $reserva->codi_usuari = $_POST['codi_usuari'];
         $reserva->data_anada = $_POST['data_anada'];
         $reserva->data_tornada = $_POST['data_tornada'];
         $reserva->nombre_places = $_POST['nombre_places'];

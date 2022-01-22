@@ -17,7 +17,7 @@ class usuariController{
     public function guardarusuari(){
         $usuari = new usuari();
         $usuari->nom = $_POST['nom'];
-        $usuari->contrasenya = $_POST['contrasenya'];
+        $usuari->contrasenya = md5($_POST['contrasenya']);
         $usuari->correu = $_POST['correu'];
         $usuari->adreça = $_POST['adreça'];
         $usuari->dni = $_POST['dni'];
