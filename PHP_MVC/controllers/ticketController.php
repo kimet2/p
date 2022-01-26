@@ -1,7 +1,7 @@
 <?php
 require_once 'models/ticket.php';
 class reservaController{
-    public function mostrarticket(){  
+    public function mostrartickets(){  
         $ticket = new ticket();
         $tickets = $ticket->mostrar();
         require_once 'views/ticket/mostrarticket.php';

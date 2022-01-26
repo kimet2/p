@@ -1,4 +1,8 @@
 <?php 
+session_start();
+if(!isset($_SESSION['usuari'])){
+  header("Location: views/usuari/login.php");
+}
 include "views/header.php";
 ?>
 
