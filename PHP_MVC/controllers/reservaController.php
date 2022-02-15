@@ -5,7 +5,7 @@ class reservaController{
         /* $vol = new vol();
         $vols = $vol->listar(); */
         $reserva = new reserva();
-        $reservas = $reserva->listar();
+        $reserves = $reserva->mostrar();
         require_once 'views/reserva/mostrarreserva.php';
     }
     public function insertarreserva(){
@@ -34,18 +34,26 @@ class reservaController{
         header("Location: index.php?controller=reserva&action=mostrarreserva");
     }
     public function modificarreserva(){
-        $reserva = new reserva();
-        $reserva->codi = $_GET['codi'];
-        $resultado = $reserva->buscar();
-        $row = $resultado->fetch_assoc();
+        if(isset($_GET['codi'])){
+            $id = $_GET['codi'];
+            $reserva = new reserva();
+            $reserva->codi = $_GET['codi'];
+            $resultado = $reserva->buscar();
+            $row = $resultado->fetch_assoc();
+        }
+        
         require_once 'views/reserva/modificarreservas.php';
     }
 
     public function eliminarreserva(){
+        if(isset($_GET['codi'])){
+        $id = $_GET['codi'];
         $reserva = new reserva();
         $reserva->codi = $_GET['codi'];
         $reserva->eliminar();
+        }
         header("Location: index.php?controller=reserva&action=mostrarreserva");
+
     }
 
     public function index(){

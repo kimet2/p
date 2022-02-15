@@ -1,4 +1,4 @@
-<form action="index.php?controller=vol&action=guardarvols" method="post">
+<form action="index.php?controller=vol&action=guardarvols" method="post" enctype="multipart/form-data">
 
     <div class="form-group">
         <label for="origen">Origen</label>
@@ -14,7 +14,7 @@
     </div>
     <div class="form-group">
         <label for="foto">Foto</label>
-        <input type="text" class="form-control" id="foto" name="foto" placeholder="Foto">
+        <input class="form-control"  type="file" name="foto" id="" required><br>
     </div>
     <div class="form-group">
         <label for="nombre_places">Nombre places</label>

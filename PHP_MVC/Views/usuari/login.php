@@ -17,7 +17,7 @@
                 <div class="signin-content">
                     <div class="signin-image">
                         <figure><img src="images/signin-image.jpg" alt="sing up image"></figure>
-                        <a href="registre.php" class="signup-image-link">Create an account</a>
+                        <a href="register.php" class="signup-image-link">Create an account</a>
                     </div>
                     <div class="signin-form">
                         <h2 class="form-title">Sign in</h2>

@@ -17,9 +17,15 @@
 <div class="p-5 bg-primary text-white text-center">
   <h1>MVC vols</h1>
 </div>
+<?php @session_start(); ?>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <div class="container-fluid">
     <ul class="navbar-nav">
+    <?php if(!isset($_SESSION['usuari'])){
+       header("Location: views/usuari/login.php");
+    }
+    else if($_SESSION['rol'] == 'admin'){
+      ?>
       <li class="nav-item">
         <a class="nav-link" href="index.php?controller=vol&action=mostrarvols">Mostrar vols</a>
       <li class="nav-item">
@@ -36,6 +42,21 @@
     <li class="nav-item">
         <a class="nav-link" href="index.php?controller=ticket&action=mostrarticket">Mostrar tickets</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="index.php?controller=usuari&action=logout">Log out</a>
+      </li>
+      <?php } 
+      else if($_SESSION['rol'] == 'usuari'){
+        ?>
+        <li class="nav-item">
+        <a class="nav-link" href="index.php?controller=vol&action=mostrarvols">Mostrar vols</a>
+        <li class="nav-item">
+        <a class="nav-link" href="index.php?controller=reserva&action=mostrarreserva">Mostrar reserva</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="index.php?controller=usuari&action=logout">Log out</a>
+      </li>
+      <?php } ?>
     </ul>
   </div>
 </nav>
